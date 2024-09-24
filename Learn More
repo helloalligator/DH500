@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Page</title>
+    <style>
+        body {
+            background-color: #8FDDD9;
+            font-family: 'Futura', 'Trebuchet MS', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        body:hover {
+            background-color: #7accc4;
+        }
+
+        header, nav, main, footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #004999;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        section#about p, section#projects p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        section#contact p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 30px;
+            color: #777;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004999;
+        }
+
+        /* Animation for section headers */
+        h2 {
+            position: relative;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <h1>Welcome to My Home Page</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello World! I'm passionate about building things that make the internet a more interesting place.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p>I sometimes create neat things on the internet, from coding experiments to beautiful design portfolios.</p>
+            <button>See More Projects</button>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>It's great to meet you! Feel free to reach out via email and let's collaborate on something awesome.</p>
+            <p><a href="mailto:aysha@helloalligator.ca">Get in touch</a></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 helloalligator. All rights reserved.</p>
+    </footer>
+</body>
+</html>
