@@ -4,102 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Home Page</title>
-<style>
-        body {
-            background-color: #8FDDD9;
-            font-family: 'Futura', 'Trebuchet MS', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        header, nav, main, footer {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.8em;
-            margin-top: 50px;
-        }
-    </style>
-</head>
-<body>
- 
-    <header>
-        <h1>Welcome to My Home Page</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav> <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Home Page</title>
     <style>
         body {
-            background-color: #8FDDD9;
+            background-color: #6C63FF; /* Purple background */
             font-family: 'Futura', 'Trebuchet MS', sans-serif;
-            color: #333;
+            color: #FFFFFF;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             transition: background-color 0.5s ease-in-out;
         }
-        body:hover {
-            background-color: #7accc4;
-        }
 
         header, nav, main, footer {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #292B36; /* Darker purple */
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            color: #333;
+            font-size: 3rem;
+            color: #FFFFFF;
             text-align: center;
             margin-bottom: 10px;
         }
 
         h2 {
-            color: #0066cc;
+            color: #FF79C6; /* Neon pink */
             margin-bottom: 15px;
         }
 
@@ -119,14 +53,16 @@
         }
 
         a {
-            color: #0066cc;
+            color: #FF79C6; /* Neon pink */
             text-decoration: none;
             font-weight: bold;
+            padding-bottom: 3px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
         }
 
         a:hover {
-            text-decoration: underline;
-            color: #004999;
+            border-bottom: 2px solid #FF79C6;
         }
 
         section {
@@ -135,52 +71,83 @@
 
         section#about p, section#projects p {
             font-size: 1.2rem;
-            color: #555;
+            color: #f0f0f0;
         }
 
         section#contact p {
             font-size: 1.1rem;
-            color: #333;
+            color: #f0f0f0;
         }
 
         footer {
             text-align: center;
             font-size: 0.9em;
-            margin-top: 30px;
-            color: #777;
+            color: #cccccc;
         }
 
         button {
-            background-color: #0066cc;
-            color: white;
+            background-color: #FF79C6;
+            color: #292B36;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 30px;
             font-size: 1rem;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
             margin-top: 10px;
             transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #004999;
+            background-color: #ff62b0;
         }
 
-        /* Animation for section headers */
-        h2 {
-            position: relative;
-            animation: slideIn 0.6s ease-out;
+        /* Image Box Section */
+        .image-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 30px 0;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-50%);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        .image-box {
+            flex: 1;
+            background-color: #3C3F51; /* Slightly darker section */
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+        }
+
+        .image-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Learn More Section */
+        .learn-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .learn-more a {
+            display: inline-block;
+            background-color: #FF79C6;
+            color: #292B36;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .learn-more a:hover {
+            background-color: #ff62b0;
         }
 
     </style>
@@ -202,25 +169,44 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello World! I'm passionate about building things that make the internet a more interesting place.</p>
+            <p>Hello World! I'm passionate about building things that make the internet a more interesting place. My work blends creativity with innovation.</p>
         </section>
         
         <section id="projects">
             <h2>My Projects</h2>
-            <p>I sometimes create neat things from coding experiments to beautiful design portfolios.</p>
+            <p>I create engaging digital experiences, from interactive websites to sleek design projects.</p>
             <button>See More Projects</button>
-        </section> 
-        
- <section id="Learn More">
-            <h2>Want to Learn More</h2>
-            <p>Check out My Cool Website</p>
-        <a href="learnmore.html" title="Learn More"Learnmore</a>
- </section>
+        </section>
         
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>It's great to meet you! Feel free to reach out via email and let's collaborate on something awesome.</p>
+            <p>Let's collaborate! Feel free to reach out via email and let's bring ideas to life together.</p>
             <p><a href="mailto:aysha@helloalligator.ca">Get in touch</a></p>
+        </section>
+
+        <!-- Image Box Section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="image-boxes">
+                <div class="image-box">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 1">
+                    <p>Project 1</p>
+                </div>
+                <div class="image-box">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 2">
+                    <p>Project 2</p>
+                </div>
+                <div class="image-box">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image 3">
+                    <p>Project 3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section class="learn-more">
+            <h2>Want to Learn More?</h2>
+            <a href="https://www.helloalligator.ca" target="_blank">Visit HelloAlligator.ca</a>
         </section>
     </main>
     
